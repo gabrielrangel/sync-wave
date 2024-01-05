@@ -1,0 +1,19 @@
+{
+  "name": "sync-wave",
+  "version": "1.0.0",
+  "description": "A Typescript API for seamless playlist management, ensuring a harmonious music experience across platforms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielrangel/sync-wave.git"
+  },
+  "author": "Gabriel Rangel",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/gabrielrangel/sync-wave/issues"
+  },
+  "homepage": "https://github.com/gabrielrangel/sync-wave#readme"
+}
