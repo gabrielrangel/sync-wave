@@ -11,11 +11,13 @@ SyncWave is a TypeScript-based API designed to simplify playlist synchronization
 ## Getting Started
 
 1. Clone the repository.
+
    ```bash
    git clone https://github.com/gabrielrangel/sync-wave.git
    ```
 
 2. Install dependencies.
+
    ```bash
    npm install
    ```
