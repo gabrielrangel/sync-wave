@@ -1,19 +1,18 @@
 import { attachControllers } from "@decorators/express";
-import { injectAll, singleton } from "tsyringe";
+import { inject, singleton } from "tsyringe";
 import express, { Express } from "express";
-import { TController } from "./decorators/controller";
-import "./controllers/rootController";
+import { Controllers } from "./controllers";
 
 @singleton()
 export class Server {
-  #port: number = process.env.PORT || 3000;
+  #port: number = process.env.PORT ?? 3000;
 
   #app: Express = express();
 
-  constructor(@injectAll("Controller") private controllers: Array<TController>) {}
+  constructor(@inject(Controllers) private controllers: Controllers) {}
 
   start() {
-    attachControllers(this.#app, this.controllers);
+    attachControllers(this.#app, this.controllers.list);
     this.#app.listen(this.#port, this.#onServerStarted.bind(this));
   }
 
